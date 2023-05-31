@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 15.0, *)
 public final class UICollectionViewComposableLayout: UICollectionViewCompositionalLayout {
 
   // MARK: - Item
@@ -419,6 +420,7 @@ public final class UICollectionViewComposableLayout: UICollectionViewComposition
 
 // MARK: - Privates
 
+@available(iOS 15.0, *)
 private extension UICollectionViewComposableLayout {
   static func groupForAllVersions(
     direction: UICollectionView.ScrollDirection

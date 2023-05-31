@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 15.0, *)
 open class Composer<Section, Item> where Section: ComposableSection, Section: Composable, Item: ComposableItem {
 
   // MARK: - Properties
@@ -78,6 +79,7 @@ open class Composer<Section, Item> where Section: ComposableSection, Section: Co
 
 // MARK: - Configuration
 
+@available(iOS 15.0, *)
 extension Composer {
   public struct Configuration {
     public var scrollDirection: UICollectionView.ScrollDirection
