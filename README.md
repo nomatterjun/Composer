@@ -48,7 +48,7 @@ public enum HomeSection: ComposableSection {
 
 `Section`과 `Item` 모두 `Hashable` 프로토콜을 준수해야 합니다.
 
-기본적으로 `Hashable`한 타입들만 사용한다면 에러는 발생하지 않겠지만, 코드의 직관성과 안정성을 위해 `==`와 `hash(into:)` 함수를 작성해주는 것이 좋습니다!
+> 기본적으로 `Hashable`한 타입들만 사용한다면 에러는 발생하지 않겠지만, 코드의 직관성과 안정성을 위해 `==`와 `hash(into:)` 함수를 작성해주는 것이 좋습니다!
 
 ```swift
 // MARK: - Hashable
@@ -141,10 +141,7 @@ public var item: UICollectionViewComposableLayout.Item {
 
 [NSCollectionLayoutItems](https://github.com/nomatterjun/Composer/wiki/NSCollectionLayoutItems)
 
-<aside>
-📍 CollectionView 전체에 대한 Configuration은 `Composable`를 초기화할 때 해줄 수 있습니다. 아래에서 확인해주세요.
-
-</aside>
+> 📍 CollectionView 전체에 대한 Configuration은 `Composable`를 초기화할 때 해줄 수 있습니다. 아래에서 확인해주세요.
 
 ### Section Header / Footer
 
