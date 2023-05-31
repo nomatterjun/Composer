@@ -207,7 +207,7 @@ case .timeline(let isEmpty):
 ---
 
 ```swift
-open class Adapter<Section, Item> where
+open class Composer<Section, Item> where
   Section: ComposableSection, Section: Composable,
   Item: ComposableItem {
   public init(
@@ -225,7 +225,7 @@ open class Adapter<Section, Item> where
 - `Section`: 1과 2에서 언급된 `ComposableSection`과 `Composable`를 채택하고 있어야 합니다.
 - `Item`: 1에서 언급된 `ComposableItem`을 채택하고 있어야 합니다.
 
-`Adapter`는 적용될 대상 CollectionView와 DataSource를 주입받아 사용됩니다. (생성자)
+`Composer`는 생성자를 통해 적용될 대상 CollectionView와 DataSource를 주입받아 사용됩니다.
 
 > DataSource는 `DiffableDataSources`를 사용하고 있습니다.
 
