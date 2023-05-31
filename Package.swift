@@ -21,10 +21,10 @@ let package = Package(
         .target(
             name: "Composer",
             dependencies: [],
-            path: "Sources/Composer"),
+            path: "Sources"),
         .testTarget(
             name: "ComposerTests",
             dependencies: ["Composer"],
-            path: "Tests/ComposerTests"),
+            path: "Tests"),
     ]
 )
