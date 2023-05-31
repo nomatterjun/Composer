@@ -139,7 +139,7 @@ public var item: UICollectionViewComposableLayout.Item {
 
 각 `NSCollectionLayoutItem`에 제공되는 설정은 **아래**에서 확인할 수 있습니다. 프로젝트 내에서 직접 확인하고 싶을 경우 `UICollectionViewComposableLayout.swift` 파일에서 확인할 수 있습니다.
 
-[NSCollectionLayoutItem](FavorCompositionalLayout%2095defb4a02e948e5965023fc9dafd0c9/NSCollectionLayoutItem%207321ed11d806438aa34cab34b8503c59.md)
+[NSCollectionLayoutItems](https://github.com/nomatterjun/Composer/wiki/NSCollectionLayoutItems)
 
 <aside>
 📍 CollectionView 전체에 대한 Configuration은 `Composable`를 초기화할 때 해줄 수 있습니다. 아래에서 확인해주세요.
