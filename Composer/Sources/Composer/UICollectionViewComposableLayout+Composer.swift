@@ -28,7 +28,7 @@ open class Composer<Section, Item> where Section: ComposableSection, Section: Co
 
   // MARK: - Functions
 
-  public func adapt() {
+  public func compose() {
     self.collectionView.collectionViewLayout = self.layout(configuration: self.configuration)
     self.collectionView.invalidateIntrinsicContentSize()
   }
