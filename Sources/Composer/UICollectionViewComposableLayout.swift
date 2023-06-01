@@ -102,6 +102,13 @@ public final class UICollectionViewComposableLayout: UICollectionViewComposition
       innerGroup: UICollectionViewComposableLayout.Group? = nil
     )
 
+    /// 하나의 Cell이 가로를 꽉 채우는 단일 아이템 Group
+    case fullList(
+      height: NSCollectionLayoutDimension,
+      contentInsets: NSDirectionalEdgeInsets? = nil,
+      innerGroup: UICollectionViewComposableLayout.Group? = nil
+    )
+
     /// 가로를 꽉 채우는 바둑판 형태의 Group
     /// - Parameters:
     ///   - height: Group의 `heightDimension`
@@ -181,6 +188,18 @@ public final class UICollectionViewComposableLayout: UICollectionViewComposition
           size: NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
             heightDimension: .fractionalHeight(1.0)
+          ),
+          numberOfItems: 1,
+          direction: .horizontal,
+          spacing: .fixed(.zero),
+          contentInsets: contentInsets ?? .zero,
+          innerGroup: innerGroup
+        )
+      case let .fullList(height, contentInsets, innerGroup):
+        return (
+          size: NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: height
           ),
           numberOfItems: 1,
           direction: .horizontal,
