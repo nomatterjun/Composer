@@ -2,9 +2,14 @@
 
 `Composer`는 `UICollectionViewCompositionalLayout`을 좀 더 간편하게 사용하고, `ViewController`의 파일 길이가 과도하게 길어지는 것을 방지하기 위해 설계되었습니다.
 
+[![Platforms](https://img.shields.io/badge/Platforms-iOS+15.0-green?style=flat-square)](https://img.shields.io/badge/Platforms-iOS.15.0-Green?style=flat-square)
+[![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)
+
+## Instruction
+
 총 네 단계의 Configuration을 통해 사용할 수 있습니다.
 
-## 1. Section & Item 정의
+### 1. Section & Item 정의
 
 ---
 
@@ -18,7 +23,7 @@ Section은 `Section`과 `Item`으로 구분되며 각각은 namespace 프로토�
 - `ComposableSection`: `Section`
 - `ComposableItem`: `Item`
 
-### 사용 예시
+#### 사용 예시
 
 ```swift
 // MARK: - Item
@@ -76,7 +81,7 @@ extension HomeSection {
 }
 ```
 
-## 2. Composable 프로토콜 채택
+### 2. Composable 프로토콜 채택
 
 ---
 
@@ -143,7 +148,7 @@ public var item: UICollectionViewComposableLayout.Item {
 
 > 📍 CollectionView 전체에 대한 Configuration은 `Composable`를 초기화할 때 해줄 수 있습니다. 아래에서 확인해주세요.
 
-### Section Header / Footer
+#### Section Header / Footer
 
 각 섹션마다 Header와 Footer를 등록해주고 싶다면 `section` 프로퍼티에서 등록해줄 수 있습니다.
 
@@ -202,7 +207,7 @@ case .timeline(let isEmpty):
 
 예시의 경우 `Section` 만의 분기처리를 다루고 있지만, `Item`과 `Group`에서도 동일한 방법으로 구현이 가능합니다. 😊
 
-## 3. Composer 정의
+### 3. Composer 정의
 
 ---
 
@@ -257,7 +262,7 @@ public struct Configuration {
 
 위 Configuration 구조체를 사용하여 `UICollectionView`의 전역적인 사항들을 적용해줄 수 있습니다.
 
-### 사용 예시
+#### 사용 예시
 
 ```swift
 lazy var composer: Composer<ProfileSection, ProfileSectionItem> = {
@@ -277,7 +282,7 @@ lazy var composer: Composer<ProfileSection, ProfileSectionItem> = {
 }()
 ```
 
-## 4. 적용
+### 4. 적용
 
 ---
 
@@ -290,3 +295,13 @@ public override func viewDidLoad() {
 ```
 
 `UICollectionViewComposableLayout`, `Composer`에 대한 설정이 모두 끝났다면 `composer.compose()` 메서드를 호출하여 적용해줍니다.
+
+## Installation
+
+### Swift Package Manager
+
+``` Swift
+dependencies: [
+    .package(url: "https://github.com/nomatterjun/Composer.git", .upToNextMajor(from: "1.0.0"))
+]
+```
