@@ -6,7 +6,7 @@
 //
 
 @MainActor
-public protocol ComposableItem: Hashable { }
+public protocol ComposableItem: Hashable, Sendable { }
 
 @MainActor
-public protocol ComposableSection: Hashable { }
+public protocol ComposableSection: Hashable, Sendable { }
