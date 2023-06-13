@@ -302,6 +302,6 @@ public override func viewDidLoad() {
 
 ``` Swift
 dependencies: [
-    .package(url: "https://github.com/nomatterjun/Composer.git", .upToNextMajor(from: "1.0.3"))
+    .package(url: "https://github.com/nomatterjun/Composer.git", .upToNextMajor(from: "1.0.4"))
 ]
 ```
