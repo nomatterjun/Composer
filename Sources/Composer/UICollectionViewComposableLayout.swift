@@ -103,7 +103,7 @@ public final class UICollectionViewComposableLayout: UICollectionViewComposition
     )
 
     /// 하나의 Cell이 가로를 꽉 채우는 단일 아이템 Group
-    case fullList(
+    case singleFullList(
       height: NSCollectionLayoutDimension,
       contentInsets: NSDirectionalEdgeInsets? = nil,
       innerGroup: UICollectionViewComposableLayout.Group? = nil
@@ -195,7 +195,7 @@ public final class UICollectionViewComposableLayout: UICollectionViewComposition
           contentInsets: contentInsets ?? .zero,
           innerGroup: innerGroup
         )
-      case let .fullList(height, contentInsets, innerGroup):
+      case let .singleFullList(height, contentInsets, innerGroup):
         return (
           size: NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
