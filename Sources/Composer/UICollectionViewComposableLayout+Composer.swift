@@ -7,6 +7,7 @@
 
 import UIKit
 
+@MainActor
 @available(iOS 15.0, *)
 open class Composer<Section, Item> where Section: ComposableSection, Section: Composable, Item: ComposableItem {
 
